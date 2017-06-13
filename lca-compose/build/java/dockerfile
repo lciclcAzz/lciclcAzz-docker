@@ -1,0 +1,11 @@
+FROM node:6.2
+
+# Create app directory
+RUN mkdir -p /nodejs
+WORKDIR /nodejs
+
+# Install app dependencies
+COPY hello.js /nodejs
+
+EXPOSE 8000
+CMD [ "node", "hello.js" ]
